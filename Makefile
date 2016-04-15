@@ -1,10 +1,16 @@
 CC=g++
 CFLAGS=-I.
 DEPS = fibonacci.h
-OBJ = fibonacci.o test_fib.o 
+OBJ = fibonacci.o fib_cpp.o 
 
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-test_fib: $(OBJ)
+fib_cpp: $(OBJ)
 	g++ -o $@ $^ $(CFLAGS)
+
+all: fib_cpp
+	chmod a+x fib_ruby.rb
+
+clean: 
+	rm *.o fib_cpp
