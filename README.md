@@ -1,7 +1,7 @@
 # fibonacci
 Fibonacci number generator libraries and example programs
 
-This repository includes libraries to generate Fibonacci numbers in C++. ~~~It includes the GMP library for big number support, so you can, for example, compute the 1000th Fibonacci number.~~~ Uses long doubles for now, but will include GMP later. The library will run on modern Linux systems, on any x86 CPU. 
+This repository includes libraries to generate Fibonacci numbers in C++. ~~It includes the GMP library for big number support, so you can, for example, compute the 1000th Fibonacci number.~~ Uses long doubles for now, but will include GMP later. The library will run on modern Linux systems, on any x86 CPU. 
 
 The repository also includes an implementation of the same library in Ruby; it is much simpler, but much slower.
 
