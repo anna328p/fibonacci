@@ -7,6 +7,6 @@
 #include <string>
 #include <algorithm>
 
-double fibonacci(double seq);
+unsigned long long int fibonacci(int seq);
 
 #endif

@@ -1,17 +1,17 @@
 #include "fibonacci.h"
 
-std::map<double, double> initializeMap() {
-	std::map<double, double> m;
+std::map<int, unsigned long long int> initializeMap() {
+	std::map<int, unsigned long long int> m;
 	m[0] = 0;
 	m[1] = 1;
 	return m;
 }
 
-std::map<double, double> __fib_result_map = initializeMap();
+std::map<int, unsigned long long int> __fib_result_map = initializeMap();
 
-double fibonacci(double seq) {
+unsigned long long int fibonacci(int seq) {
 	using namespace std;
-	map<double, double>& m = __fib_result_map;
+	map<int, unsigned long long int>& m = __fib_result_map;
 #ifdef __DEBUG
 	cerr << std::fixed;
 	cerr.precision(0);
