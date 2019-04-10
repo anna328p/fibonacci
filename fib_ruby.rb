@@ -1,15 +1,9 @@
 #!/usr/bin/ruby
 
 $fib_hash = {0 => 0, 1 => 1}
-#p $fib_hash
 
 def fib(seq) 
-	if $fib_hash[seq] == nil
-		$fib_hash[seq] = fib(seq - 2) + fib(seq - 1)
-		STDERR.print "Generating Fibonacci #", seq, ": ", $fib_hash[seq], ".\n" if $DEBUG
-	end
-	STDERR.print "Looked up Fibonacci #", seq, ": ", $fib_hash[seq], ".\n" if $DEBUG
-	return $fib_hash[seq]
+	return $fib_hash[seq] || ($fib_hash[seq] = fib(seq - 2) + fib(seq - 1))
 end
 
-for i in ARGV do puts fib(i.to_i) end
+puts ARGV.map { |i| fib i.to_i }
